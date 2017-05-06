@@ -1,0 +1,163 @@
+@charset "utf-8";
+
+#btn_enter {
+	width: 685px;
+	height:140px;
+	text-align:center;
+	background-color:#ed6969;
+	line-height:45px;
+	color:#fff;
+	font-size: 44px;
+	/* position:fixed; */
+	top:0;
+	left:0;
+	/* z-index:199; */
+}
+
+#btn_enter .back {
+	width:12px;
+	height:17px;
+	float:left;
+	display:inline-block;
+	margin-top:14px;
+	margin-left:20px;
+	padding:0;
+	*
+	display:inline;
+	*
+	zoom:1;
+}
+#btn_enter .search {
+	width:20px;
+	height:20px;
+	float:right;
+	display:inline-block;
+	margin-top:12px;
+	margin-right:18px;
+	padding:0;
+	*
+	display:inline;
+	*
+	zoom:1;
+}
+
+#btn_enter .headline {
+	height:45px;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+}
+
+.headline {
+	position: relative;
+	top: 50px;
+	font-size: 44px;
+}
+
+#Icon {
+	background-color: #ed6969;
+	border:#ed6969 solid 3px;
+	border-radius: 10px;
+	margin: 0 auto;
+	width: 250px;
+	height: 250px;
+}
+
+#about {
+	margin: 262px auto 146px;
+}
+
+body{
+	background-color: #eee;
+	color: #444;
+}
+a{
+	color: #444;
+}
+.login .form{
+	width: 700px;
+	margin: 0 auto 512px;
+	overflow: hidden;
+}
+.login .sign{
+	margin-bottom: 14px;
+}
+.sign .signup{
+	text-align: center;
+	color: #ed6969;
+	float: left;
+	display: inline-block;
+	font-size: 26px;
+}
+
+.login .user-info{
+	width: 685px;
+	height: 103px;
+}
+.user-info.name{
+	margin-bottom: 18px;
+}
+.user-info.pwd{
+	margin-bottom: 32px;
+}
+.login .user-info input{
+	width: 685px;
+	height: 103px;
+	padding-left: 41px;
+	font-size: 33px;
+	color: #afafaf;
+	background-color: transparent;
+	line-height: 42px;
+}
+.login .enter input{
+	width: 685px;
+	height: 40px;
+	margin: 0 auto 24px;
+}
+
+.login li .getpwd{
+	width: 126px;
+	height: 34px;
+	color: #ed6969;
+	line-height: 34px;
+	text-align: center;
+	float: right;
+	display: inline-block;
+	*
+	display: inline;
+	font-size: 26px;
+	*
+	zoom: 1;
+}
+.login .sinn{
+	width: 416px;
+	height: 110px;
+	margin: 45px auto 0;
+}
+.login .sinn a{
+	height: 100px;
+	float: left;
+	display: inline-block;
+	*
+	display: inline;
+	*
+	zoom: 1;
+}
+.login .sinn a.wechat{
+	width: 150px;
+	background-image: url("../images/icon/wechat.png");
+	background-repeat: no-repeat;
+}
+.login .sinn a.sina{
+	width: 95px;
+	background-image: url("../images/icon/sina.png");
+	background-repeat: no-repeat;
+}
+.login .sinn a.qq{
+	width: 150px;
+	background-image: url("../images/icon/qq.png");
+	background-repeat: no-repeat;
+}

@@ -1,0 +1,39 @@
+@charset "utf-8";
+/*新用户注册begin*/
+body{
+	background-color: #eee;
+}
+.form{
+	width: 690px;
+	margin: 0 auto 675px;
+	/* padding-top: 20px; */
+}
+.form li{
+	margin-bottom: 10px;
+}
+.form li input,.form li #btn_recode{
+	width: 685px;
+	padding-left: 2%;
+	height: 103px;
+	display: block;
+	border: 3px solid #ed6969;
+	border-radius: 5px;
+	line-height: 35px;
+	font-size: 36px;
+	color: #a0a0a0;
+}
+.form li .btn,.form li #btn_recode{
+	background-color: #ed6969;
+	color: #fff;
+	font-weight: bold;
+	font-family: 微软雅黑;
+	border: none;
+	margin-top: 25px;
+	letter-spacing: 3px;
+	font-size: 44px;
+}
+.form li #btn_recode{
+	text-align: center;
+
+}
+/*新用户注册end*/

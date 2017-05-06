@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta content="telephone=no" name="format-detection" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="viewport" content="width=320, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon.png"/>
+	<link href="css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="css/foot.css" rel="stylesheet" type="text/css" />
+	<link rel='stylesheet' type='text/css' href='css/user.css' />	
+	<script src="js/jquery-1.6.2.min.js" type="text/javascript"></script>
+    <script src="js/jquery.autocomplete.js" type="text/javascript"></script>
+	<script src="js/jquery.touchScroll.js" type="text/javascript"></script>
+</head>
+<body>
+
+<div id="about">
+    <div id="Icon"></div>
+    <p style="text-align: center; font-size: 44px; color: #ed6969">NAME</p>
+</div>
+
+<section class="login">
+    <div class="form">
+        <form method="post" action="" onsubmit="return false;">
+            <input type="hidden" name="" value=" ">
+            <ul>
+                <li class="user-info name" style="border:#ed6969 solid 3px; border-radius: 10px">
+                    <input class="tipInput" tiptext="用户名/手机号" type="text" placeholder="" value="" name="user_name" id="user_name">
+                </li>
+                <li class="user-info pwd" style="border:#ed6969 solid 3px; border-radius: 10px">
+                    <input class="password" tar="password" type="text" value="密码" style="display: inline-block;">
+                    <input id="password" type="password" value="" name="password" style="display: none;">
+                    <input type="hidden" name="back" value="">
+                </li>
+                <li>
+                    <input class="headline" id="btn_enter" type="submit" value="登录" style="border:#ed6969 solid 3px; border-radius: 10px">
+                </li>
+
+                <li class="sign clearfix">
+                    <a class="signup" href="reg.html">注册</a>
+                    <a class="getpwd" href="#">忘记密码</a>
+                </li>
+
+                <p style="font-size: 34px; text-align: center; color: #ed6969;">其他方式</p>
+
+                <li class="sinn clearfix">
+                    <a class="wechat" href="#"></a>
+                    <a class="qq" href="#"></a>
+                    <a class="sina" href="#"></a>
+                </li>
+            </ul>
+            <input type="hidden" name="act" value="login">
+                <div id="alipay" style="display: none"></div>
+        </form>
+    </div>
+</section>
+
+<script type='text/javascript'>
+    $(function(){
+        $("#btn_enter").click(function(e){
+            e.preventDefault();
+            var user_name = $("#user_name").val();
+            var pwd = $("#password").val();
+            var act = $("input[name=act]").val();
+            var remerber=$("#remerber").attr("checked");
+            if(remerber!='checked'){
+                remerber=0;
+            }else{
+                remerber=1;
+            }
+            if(user_name=='用户名/手机号' || pwd=='密码'){
+                alert('用户名密码不能为空！');
+                return false;
+            }
+            $.post('ajax',{act:act,user_name:user_name,password:pwd,remerber:remerber},function(data){
+                    //登录逻辑
+   /*             if(data.success==1) {
+                    var back = $("input[name=back]").val();
+                    if(back.length>0){
+                            window.location=back;
+                    }else{
+                        window.location='../user';
+                        }
+                }else if(data.error=="silence"){
+                    window.location='../active/direct_login';
+                }else{
+                    alert(data.error);
+                    return false;
+                }*/
+            },'JSON');
+        });
+    });
+</script>
+
+<!--页面底部-->
+<div class="foot">
+    <!--页脚第一行快速定位区域begin-->
+        <div class="bottom">
+            <div class="inner">
+				<a class="btn-back back" href="javascript:history.back();"><i></i>返回</a>
+				<a class="btn-top" style=" width:40%;" id="btn-top"  href="#">下载客户端<i style="width: 18px;background-position: -16px 0;margin: 9px auto auto 8px;"></i></a>
+				<a class="btn-top" id="btn-top" href="#">回顶部<i></i></a>
+			</div>
+		</div>
+		<!--页脚第一行快速定位区域end-->
+    </div>
+
+    <script src="js/m_code.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $("#btn-top").click(function(){
+            document.getElementsByTagName('body')[0].scrollTop = 0;
+        });
+        function set_view(id){
+        var url = "login";
+            window.location.href="../t/"+id+"/?url="+url;
+        }
+    </script>
+
+	<script type="text/javascript">
+        var global_loading=document.getElementById("global_loading");
+        if(global_loading != null){
+            global_loading.parentNode.removeChild(global_loading);
+		}
+    </script>
+</body>
+</html>
+
