@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <title>home</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta content="telephone=no" name="format-detection" />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -18,7 +19,6 @@
 
 <div id="about">
     <div id="Icon"></div>
-    <p style="text-align: center; font-size: 44px; color: #ed6969">NAME</p>
 </div>
 
 <section class="login">
@@ -90,6 +90,11 @@
                     return false;
                 }*/
             },'JSON');
+            var url = document.referrer;
+            if (url == './reg.html')
+                window.location='./recognize.html';
+            else
+                window.location='./setting.html';
         });
     });
 </script>
@@ -106,8 +111,6 @@
 		</div>
 		<!--页脚第一行快速定位区域end-->
     </div>
-
-    <script src="js/m_code.js" type="text/javascript"></script>
 
     <script type="text/javascript">
         $("#btn-top").click(function(){

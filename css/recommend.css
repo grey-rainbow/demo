@@ -1,0 +1,13 @@
+#showMate{
+    width: 942px;
+    margin: 64px;
+    text-align: center;
+}
+
+#headPort{
+    background-image: url("../images/test-image/0018.jpg");
+    width: 336px;
+    height: 336px;
+    border-radius: 336px;
+    margin: 32px auto 18px;
+}

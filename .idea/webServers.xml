@@ -2,8 +2,8 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="089ba868-914e-41f7-944c-6adf274d11c5" name="localhost" url="http://222.29.40.119:8080">
-        <fileTransfer port="0" mountedRoot="C:\Users\曾辉\Downloads\login" accessType="MOUNT" />
+      <webServer id="40cfea50-9734-44ac-bb80-764c94774cc9" name="localhost" url="http://222.29.40.72:8080">
+        <fileTransfer port="0" mountedRoot="F:\codes\javascript\login" accessType="MOUNT" />
       </webServer>
     </option>
   </component>

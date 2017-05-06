@@ -8,10 +8,13 @@
 	line-height:45px;
 	color:#fff;
 	font-size: 44px;
-	/* position:fixed; */
 	top:0;
 	left:0;
-	/* z-index:199; */
+	background:-moz-linear-gradient(left,#ffcecf,#ed6969);/*Mozilla*/
+	background:-webkit-gradient(linear,0 50%,100% 50%,from(#ffcecf),to(#ed6969));/*Old gradient for webkit*/
+	background:-webkit-linear-gradient(left,#ffcecf,#ed6969);/*new gradient for Webkit*/
+	background:-o-linear-gradient(left,#ffcecf,#ed6969); /*Opera11*/
+	background: -ms-linear-gradient(left,  #ffcecf 0%,#ed6969 100%);
 }
 
 #btn_enter .back {
@@ -58,12 +61,11 @@
 }
 
 #Icon {
-	background-color: #ed6969;
-	border:#ed6969 solid 3px;
+	background: url("../images/icon/logo.png") no-repeat;
 	border-radius: 10px;
 	margin: 0 auto;
-	width: 250px;
-	height: 250px;
+	width: 238px;
+	height: 264px;
 }
 
 #about {
